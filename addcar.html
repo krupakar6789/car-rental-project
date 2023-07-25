@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add car</title>
+    <script src="https://kit.fontawesome.com/15d438045a.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin-top: 0px;
+        }
+        input{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+textarea{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+select{
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+   
+}
+.form{
+    margin-top: 20px;
+    margin-left: 50px;
+    color: rgb(4, 4, 4);
+    border: 3px solid rgb(241, 229, 229);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    background-color: rgb(241, 229, 229);
+}
+.form:hover{
+    box-shadow: 5px 5px 5px 5px rgb(192, 176, 176);
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="row row1">
+        <div class="col-5 img"><br><br><br>
+        <img src="images/logo.png" class="img1">
+    </div>
+    <center>
+    <div class="col-5 form">
+    <i class="fa-solid fa-car signup" style="font-size: 30px;"></i>
+        <h1 class="signup1">Add Car</h1>
+        <form method="POST" action="addprocess.jsp">
+            <input type="text" placeholder="Vehicle Name" name="name" id="name" required><br/><br/>
+            <input type="text" placeholder="Vehicle Model" name="model" id="model" required><br/><br/>
+            <input type="text" placeholder="Vehicle Number" name="number" id="number" required><br/><br/>
+            <input type="number" placeholder="Seating Capacity" name="seating" id="seating" min="1" max="50" style="width: 240px; " required><br/><br/>
+            <input type="text" placeholder="Rent" name="rent" id="rent" required><br/><br/>
+            <textarea rows="4" placeholder="Description" name="description" id="description" required></textarea><br><br>
+            <select name="cars" id="cars">
+                <option value="luxury">Luxury Cars</option>
+                <option value="volvo">Volvo</option>
+                <option value="tempo">Tempo Traveller</option>
+                <option value="special">Special Cars</option>
+              </select><br><br>
+              <input type="text" placeholder="Image Path" name="img" id="img" required><br/><br/>
+            <input type="submit" value="Submit" class="register"><br/><br/>
+        </form>
+        </div>
+        </center>
+    </div>
+   
+
+</body>
+</html>
